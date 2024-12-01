@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+
+cc -std=c2x ./example.c ./validate.c -o a.out
+./a.out
+rm a.out
