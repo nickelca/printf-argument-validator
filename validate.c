@@ -18,7 +18,8 @@ Validate_Printf(size_t *index, char *fmt, ...)
     enum Printf_Type_ID current = T_Invalid;
     size_t i = 0;
     while ((current = va_arg(args, int)) != T_Sentinel) {
-        if (i > correct_count) {
+        if (i >= correct_count) {
+            *index = i + 1;
             return E_Printf_Extra_Arg;
         }
         if (current != correct_args[i]) {
