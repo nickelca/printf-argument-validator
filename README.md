@@ -26,3 +26,6 @@ the list of type IDs to verify that the correct types are passed. This is what
 `Validate_Printf` does. If the types aren't correct, then the printf is not
 executed, and instead a helpful error message is printed and the program
 continues.
+
+This project requires C23 (or C2X) due to usage of `__VA_OPT__` in macros,
+`typeof_unqual` in the _Generic for type ID, and enum type specifiers.
